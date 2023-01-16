@@ -22,10 +22,11 @@
                     </script>
                     <script>
                         var stripe = Stripe('pk_test_51MQhfeBxj5iUlpsCe8S8QY8xqRqm5J2TBRxWFHL7Y91Nr0wtmESHxNtkce5I2al25JWW52kimQY3eXmq08OjAwpN00GlAEdcRH');
+                        console.log("Before initiating stripe object");
                         var orderBtn = document.getElementById('order-btn');
                         orderBtn.addEventListener('click', function(){
                             stripe.redirectToCheckout({
-                                sessionId: 'cs_test_a1oSNIA1gneLIZbDFJlae3q9c8JmQ0pxuZRzeivRIABAboqtXpVoqqsMaB',
+                                sessionId: '<%= sessionId %>',
                             })
                         });
                     </script>
