@@ -253,7 +253,6 @@ exports.getCheckout = (req, res, next) => {
             req.protocol + "://" + req.get("host") + "/checkout/cancel",
         })
         .then((session) => {
-          console.log(session.id);
           res.render("shop/checkout", {
             path: "/checkout",
             pageTitle: "Checkout",
